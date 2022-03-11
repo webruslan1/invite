@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Sweet Mavka';
+    src: local('Sweet Mavka'), url('/fonts/Sweetmavkascript.woff2') format('woff2'), url('/fonts/Sweetmavkascript.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display'), url('/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body{
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/img/main.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+}
+
+.subtitle{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    color: #5D5D5D;
+    margin-bottom: 7px;
+}
+
+.title{
+    position: relative;
+}
+
+.title span{
+    display: inline-block;
+    font-family: 'Sweet Mavka', sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 93px;
+    color: #fff;
+    transform: rotate(-4.22deg);
+    z-index: 9;
+    position: relative;
+}
+
+.title img{
+    position: absolute;
+    width: 534px;
+    height: 153px;
+    bottom: -22px;
+    right: -149px;
+    z-index: 8;
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight; 
+ 
+    animation-duration: 2s; 
+    -webkit-animation-duration: 2s;
+ 
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;     
+ 
+    visibility: visible !important; 
+}
+
+.title-anim{
+    position: absolute;
+    width: 534px;
+    height: 115px;
+    bottom: -22px;
+    right: -149px;
+    z-index: 10;
+}
+
+.show{
+    animation-name: fade;
+    -webkit-animation-name: fade; 
+ 
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+ 
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;   
+}
+
+.main-title{
+    font-family: 'Sweet Mavka', sans-serif;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 104px;
+    color: #AB85B6;
+    margin: 0;
+    margin-bottom: 19px;
+    word-spacing: 25px;
+}
+
+.date{
+    font-family: 'Playfair Display',sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    color: #5E5E5E;
+    margin-bottom: 15px;
+}
+
+.time{
+    font-family: 'Playfair Display',sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    color: #AB85B6;
+    margin-bottom: 68px;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.address span{
+    font-family: 'Playfair Display',sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #AB85B6;
+}
+
+
+.bottom-center{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    min-width: 1980px;
+    max-width: 100%;
+}
+
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-150%);
+    }
+    30%{
+        transform: translateX(10%);
+    }
+    40%{
+        transform: translateX(-5%);
+    }
+    50%{
+        transform: translateX(8%);
+    }
+    65%{
+        transform: translateX(-4%);
+    }
+    80%{
+        transform: translateX(2%);
+    }
+    95%{
+        transform: translateX(-1%);
+    }           
+    100% {
+        transform: translateX(0%);
+    }   
+}
+ 
+@-webkit-keyframes slideRight {
+    0% {
+        -webkit-transform: translateX(-150%);
+    }
+    50%{
+        -webkit-transform: translateX(8%);
+    }
+    65%{
+        -webkit-transform: translateX(-4%);
+    }
+    80%{
+        -webkit-transform: translateX(4%);
+    }
+    95%{
+        -webkit-transform: translateX(-2%);
+    }           
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+
+@media screen and (max-width:900px) {
+    .subtitle{
+        font-size: 24px;
+    }
+
+    .main-title{
+        font-size: 60px;
+        text-align: center;
+        line-height: 70px;
+    }
+}
